@@ -1,0 +1,83 @@
+body{
+  background-color:  #EFF2F7;
+  margin:0px;
+}
+.navbar{
+  margin-top: 0px;
+}
+@media screen and (max-width: 624px){
+  .navbar ul{
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 544px){
+
+  .navbar ul{
+    padding: 0px;
+  }
+  div .container-fluid{
+      padding:0px  5px;
+    }
+}
+.min-size{
+  font-size: 14px;
+}
+@media screen and (max-width: 512px){
+
+div .container-fluid{
+    padding:0px  5px;
+  }
+  .ml-auto, .mx-auto {
+      margin-left: 0px !important;
+  }
+}
+@media screen and (max-width: 480px){
+
+div .container-fluid{
+    padding:0px  5px;
+  }
+  .ml-auto, .mx-auto {
+      margin-left: 0px !important;
+  }
+}
+@media screen and (max-width: 452px){
+  .ml-auto, .mx-auto {
+      margin-left: 0px;
+  }
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+}
+.ml-auto, .mx-auto {
+    margin-left: 0px;
+}
+}
+.no-border{
+  border-radius: 0px;
+}
+.input-group-text{
+  background-color: #2F3640;
+  color: #fff;
+}
+.input-text{
+  background-color: #2F3640;
+  color: #fff;
+}
+.modal-content  {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+.modal-title{
+  text-align: center;
+}
+.modal-body  {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.text-gray{
+  color:#C0C0C0;
+}
