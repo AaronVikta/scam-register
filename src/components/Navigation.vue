@@ -2,10 +2,10 @@
   <div class="container-fluid">
     <nav class="navbar navbar-expand-lg container-fluid">
       <ul>
-        <a href="#" class="navbar-brand">#Scam Register</a>
+        <router-link to="/" class="navbar-brand">#Scam Register</router-link>
       </ul>
       <ul class="ml-auto">
-        <a href="#" class="mr-4 text-bold min-size" ><bold>SUBMIT A REPORT</bold></a>
+        <router-link to="/dashboard" class="mr-4 text-bold min-size">SUBMIT A REPORT</router-link>
         <a class="mr-2" href="#" data-target="#signin" data-toggle="modal">Sign in</a>/
         <a href="#" data-target="#register" data-toggle="modal">Register</a>
       </ul>

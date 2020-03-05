@@ -3,7 +3,7 @@
   <Navigation/>
     <div class="row">
       <div class="col-md-12">
-        <h1 class="mt-2">{{ msg }}</h1>
+        <h1 class="mt-2">Scam Register</h1>
       </div>
       <div class="col-md-3">
 
@@ -15,7 +15,7 @@
           <div class="input-group">
             <input type="text" name="" class="form-control no-border" value="">
             <div class="input-group-prepend">
-              <span class="input-group-text no-border" id="searchbox">Search</span>
+              <span class="input-group-text btn no-border" id="searchbox">Search</span>
             </div>
           </div>
         </div>
@@ -76,11 +76,15 @@ import Navigation from './../components/Navigation.vue';
 export default {
   name: 'HomePage',
   props: {
-    msg: String
   },
   components:{
   Navigation
+},
+data(){
+  return{
+
   }
+}
 }
 </script>
 
