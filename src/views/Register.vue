@@ -53,14 +53,14 @@
               </div>
             </div>
             <div class="row">
-              <div class="col">
+              <div class="col mb-2">
                 <input type="text" name="" v-model="confirmpassword" class="form-control rounded-0 mt-2" placeholder="Confirm Password">
               </div>
             </div>
             <div class="row">
               <div class="col">
-                <input type="submit" v-bind:disabled="!isvalidForm"
-                name="" data-dismiss="modal" class="form-control rounded-0
+                <input type="submit"
+                name="" class="form-control rounded-0
                  input-text text-center" value="Register" @click="register()">
               </div>
             </div>
@@ -79,7 +79,7 @@
 
 <script>
 import Navigation from './../components/Navigation.vue'
-import axios from 'axios'
+
 export default {
   components:{
     Navigation
@@ -98,22 +98,24 @@ export default {
     }
   },
   computed:{
-    isvalidForm(){
-      return this.email&&this.password&&
-      this.confirmpassword&&this.firstname&&this.lastname
-      &&this.phone&&this.nin
-    }
+
   },
   methods:{
     register(){
-      if(this.password ==this.confirmpassword){
-        axios.post(`api/register`,{
-
+        let data={
+          firstname:this.firstname,
+          lastname:this.lastname,
+          email:this.email,
+          password:this.password,
+          confirmpassword:this.confirmpassword,
+          phone:this.phone,
+          nin:this.nin
+        }
+        this.$http.post('http://localhost:8081/register',{
+          data
         })
-      }
-      else {
-        this.error ='Passwords do not match'
-      }
+        .then(()=>this.$router.push('/'))
+        .catch(err=>console.log(err))
     }
   }
 }

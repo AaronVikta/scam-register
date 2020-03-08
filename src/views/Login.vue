@@ -31,7 +31,8 @@
 
           <div class="row">
             <div class="col">
-              <input type="submit" name="" data-dismiss="modal" class="form-control rounded-0 input-text text-center" value="Login">
+              <input type="submit" name="" class="form-control rounded-0 input-text mt-2 text-center" value="Login"
+              @click="login()">
             </div>
           </div>
         </form>
@@ -55,10 +56,32 @@
 
 <script>
 import Navigation from './../components/Navigation.vue'
+// import axios from 'axios'
 export default {
   components:{
     Navigation
 
+  },
+  data(){
+    return{
+      email:'',
+      password:''
+    }
+  },
+  methods:{
+    login(){
+      let email =this.email
+      let password =this.password
+      this.$http.post('http://localhost:8081/login',{
+        email,password
+      })
+      .then(response=>{
+        localStorage.setItem('user',JSON.stringify(response.data.user))
+        localStorage.setItem('jwt',response.data.token)
+        this.$router.push('/dashboard')
+      })
+      .catch(err=>console.log(err))
+    }
   }
 }
 </script>

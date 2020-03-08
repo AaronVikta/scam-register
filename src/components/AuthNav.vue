@@ -1,13 +1,12 @@
 <template>
-  <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg container-fluid">
+  <div class="body">
+    <nav class="navbar bg-light navbar-light">
       <ul>
         <router-link to="/" class="navbar-brand">#Scam Register</router-link>
       </ul>
       <ul class="ml-auto">
-        <router-link to="/dashboard" class="mr-4 text-bold min-size">SUBMIT A REPORT</router-link>
-        <router-link class="mr-2" to="/register">Register</router-link>
-        <router-link to="/login"> Sign in</router-link>
+        <router-link to="/settings" class="mr-3 text-bold">Settings</router-link>
+        <a href="#">Logout</a>
       </ul>
     </nav>
   </div>
@@ -35,7 +34,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.bg-light{
+background: #fff;
+max-height: 60px;
+}
+.body{
+  margin:0px;
+}
 a {
   color: #000;
 }

@@ -1,13 +1,15 @@
 <template>
-  <div class="container-fluid">
+  <div class="body">
     <Navigation/>
+
   </div>
 </template>
 
 <script>
-import Navigation from './../components/Navigation.vue';
+import Navigation from './../components/AuthNav.vue';
 
 export default {
+  name:'dashboard',
   components:{
     Navigation
   }
@@ -15,4 +17,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.body{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
 </style>
